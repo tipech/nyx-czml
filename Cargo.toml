@@ -1,0 +1,20 @@
+[package]
+name = "nyx-czml"
+version = "0.1.0"
+edition = "2021"
+description = "CZML exporter for nyx-space trajectories — animate orbits, ground tracks, and sensor footprints in CesiumJS"
+license = "Apache-2.0"
+repository = "https://github.com/nyx-space/nyx-czml"
+keywords = ["czml", "cesium", "orbit", "trajectory", "nyx"]
+categories = ["science", "visualization", "encoding"]
+
+[dependencies]
+nyx-space = "2"
+anise = "0.9"
+hifitime = "4"
+serde = { version = "1", features = ["derive", "rc"] }
+serde_json = "1"
+thiserror = "1"
+
+[dev-dependencies]
+anyhow = "1"
