@@ -30,7 +30,7 @@ std::fs::write("orbit.czml", doc.to_json()?)?;
 
 ## Example
 
-A 400 km sun-synchronous orbit propagated for 3 hours. ANISE planetary data (~60 MB) is downloaded automatically on first run and cached in your OS data directory.
+A 400 km sun-synchronous orbit propagated for 3 hours.
 
 ```
 cargo run --example leo_orbit
