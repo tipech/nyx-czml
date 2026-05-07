@@ -1,6 +1,6 @@
 [package]
 name = "nyx-space-czml"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "CZML exporter for nyx-space trajectories — animate orbits, ground tracks, and sensor footprints in CesiumJS"
 license = "AGPL-3.0-only"

@@ -68,7 +68,7 @@ let cfg = CzmlExportCfg::new("Spacecraft Name")
 
 | Method | Default | Description |
 |---|---|---|
-| `with_step(Duration)` | raw knots | Resample the trajectory at a fixed interval. Without this, raw propagator knots are emitted — fewest points, highest fidelity. |
+| `with_step(Duration)` | raw knots | Resample the trajectory at a fixed interval. Without this, raw propagator knots are emitted. |
 | `with_time_window(Epoch, Epoch)` | full trajectory | Clip the export to a sub-interval of the trajectory. |
 
 ### Orbital trail
@@ -117,7 +117,7 @@ Requires Earth orientation data (same as ground track). Models a circular, nadir
 
 ### Packet identity
 
-The spacecraft packet id defaults to `"spacecraft"`. To set a custom id — required when exporting multiple trajectories into one document — set the field directly:
+The spacecraft packet id defaults to `"spacecraft"`. To set a custom id (required when exporting multiple trajectories into one document) set the field directly:
 
 ```rust
 let mut cfg = CzmlExportCfg::new("Sat-1");
@@ -137,7 +137,7 @@ Each call to `to_czml` produces a CZML document (a JSON array) with up to four p
 
 ### Position encoding
 
-The spacecraft position uses CZML's `cartesianVelocity` format: a flat array of `[t, x, y, z, vx, vy, vz, ...]` with time offsets in seconds from the `epoch` field and distances in **meters**. This enables HERMITE interpolation in Cesium — the viewer reconstructs a smooth trajectory between knots without visible kinks.
+The spacecraft position uses CZML's `cartesianVelocity` format: a flat array of `[t, x, y, z, vx, vy, vz, ...]` with time offsets in seconds from the `epoch` field and distances in **meters**. This enables HERMITE interpolation in Cesium, where the viewer reconstructs a smooth trajectory between knots.
 
 The ground track uses `cartesian` (position only) with Lagrange interpolation, which is sufficient for the slower-varying surface projection.
 
