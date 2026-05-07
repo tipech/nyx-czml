@@ -2,8 +2,8 @@ pub mod config;
 pub mod czml;
 pub mod error;
 pub mod exporter;
-pub mod footprint;
-pub mod groundtrack;
+pub(crate) mod footprint;
+pub(crate) mod groundtrack;
 
 pub use config::{CzmlExportCfg, SensorConfig};
 pub use czml::{CzmlDocument, HeightReference, InterpolationAlgorithm, ReferenceFrame};
