@@ -1,4 +1,4 @@
-# nyx-czml
+# nyx-space-czml
 
 Export [nyx-space](https://github.com/nyx-space/nyx) trajectories to [CZML](https://github.com/CesiumGS/czml-writer/wiki/CZML-Guide) for 3D orbit animation in [CesiumJS](https://cesium.com) and [Cesium ion](https://ion.cesium.com).
 
@@ -10,7 +10,7 @@ Positions are emitted as `cartesianVelocity` with HERMITE interpolation, so Cesi
 
 ```toml
 [dependencies]
-nyx-czml = "0.1"
+nyx-space-czml = "0.1"
 ```
 
 ## Quick start
@@ -150,4 +150,4 @@ traj.to_czml_file(Path::new("orbit.czml"), &cfg, almanac)?;
 
 ## License
 
-`nyx-czml` is licensed under the [GNU Affero General Public License v3.0](LICENSE), the same license as [nyx-space](https://github.com/nyx-space/nyx) on which it depends.
+`nyx-space-czml` is licensed under the [GNU Affero General Public License v3.0](LICENSE), the same license as [nyx-space](https://github.com/nyx-space/nyx) on which it depends.
