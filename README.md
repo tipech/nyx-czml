@@ -147,3 +147,7 @@ The ground track uses `cartesian` (position only) with Lagrange interpolation, w
 ```rust
 traj.to_czml_file(Path::new("orbit.czml"), &cfg, almanac)?;
 ```
+
+## License
+
+`nyx-czml` is licensed under the [GNU Affero General Public License v3.0](LICENSE), the same license as [nyx-space](https://github.com/nyx-space/nyx) on which it depends.
